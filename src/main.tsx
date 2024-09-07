@@ -5,6 +5,7 @@ import "./index.css";
 
 const root = document.getElementById("root");
 
+// biome-ignore lint/style/noNonNullAssertion: Root element is always present
 createRoot(root!).render(
 	<StrictMode>
 		<App />
