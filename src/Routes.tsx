@@ -1,5 +1,5 @@
 import { Route, Switch } from "wouter";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 
 const Routes = () => {
 	return (

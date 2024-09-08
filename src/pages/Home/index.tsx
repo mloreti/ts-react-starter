@@ -1,5 +1,5 @@
+import { Button } from "@/components/ui/button";
 import React from "react";
-import { Button } from "../ui/button";
 
 const Home = () => {
 	const [clicked, setClicked] = React.useState(false);
