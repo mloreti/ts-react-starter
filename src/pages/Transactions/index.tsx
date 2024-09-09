@@ -21,25 +21,28 @@ const Home = () => {
 		queryKey: ["transactionData"],
 		queryFn: () => transactions,
 	});
-	const [selectedCategory, setSelectedCategory] = React.useState<string | null>(
-		null,
+	const [selectedCategories, setSelectedCategories] = React.useState<string[]>(
+		[],
 	);
 
 	const categories =
 		data?.transactions.map((transaction) => transaction.categories) || [];
 	const uniqueCategories = [...new Set(categories.flat())];
-	const transactionsToShow = selectedCategory
-		? data?.transactions.filter((transaction) =>
-				transaction.categories.includes(selectedCategory),
-			)
-		: data?.transactions;
+	const transactionsToShow =
+		selectedCategories.length > 0
+			? data?.transactions.filter((transaction) =>
+					selectedCategories.some((category) =>
+						transaction.categories.includes(category),
+					),
+				)
+			: data?.transactions;
 
 	const handleCategoryClick = (category: string) => {
-		if (selectedCategory === category) {
-			setSelectedCategory(null);
+		if (selectedCategories?.includes(category)) {
+			setSelectedCategories(selectedCategories.filter((c) => c !== category));
 			return;
 		}
-		setSelectedCategory(category);
+		setSelectedCategories([...selectedCategories, category]);
 	};
 
 	return (
@@ -49,10 +52,10 @@ const Home = () => {
 					<Button
 						variant="outline"
 						onClick={() => handleCategoryClick(category)}
-						className={`${selectedCategory === category ? "bg-gray-500 text-white" : ""}`}
+						className={`${selectedCategories.includes(category) ? "bg-gray-500 text-white" : ""}`}
 						key={category}
 					>
-						{category} {selectedCategory === category ? "✓" : ""}
+						{category} {selectedCategories.includes(category) ? "✓" : ""}
 					</Button>
 				))}
 			</div>
