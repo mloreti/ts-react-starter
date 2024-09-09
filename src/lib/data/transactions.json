@@ -1,0 +1,53 @@
+{
+	"transactions": [
+		{
+			"institution_name": "Chase",
+			"amount": 2307.21,
+			"categories": ["Shops", "Computers and Electronics"],
+			"date": "2023-01-29",
+			"name": "Apple Store"
+		},
+		{
+			"institution_name": "Chase",
+			"amount": 15.59,
+			"categories": ["Restaurants"],
+			"date": "2023-01-25",
+			"name": "Mixt"
+		},
+		{
+			"institution_name": "Chase",
+			"amount": 187.34,
+			"categories": ["Shops", "Clothing"],
+			"date": "2023-01-11",
+			"name": "Old Navy"
+		},
+		{
+			"institution_name": "Chase",
+			"amount": 5000.5,
+			"categories": ["Restaurants"],
+			"date": "2023-01-01",
+			"name": "Gary Danko"
+		},
+		{
+			"institution_name": "Wells Fargo",
+			"amount": 78.5,
+			"categories": ["Food and Drink", "Restaurants"],
+			"date": "2022-12-29",
+			"name": "Golden Crepes"
+		},
+		{
+			"institution_name": "Wells Fargo",
+			"amount": 200.5,
+			"categories": ["Shops", "Toy Store"],
+			"date": "2023-12-24",
+			"name": "Disney Store"
+		},
+		{
+			"institution_name": "Wells Fargo",
+			"amount": 48.25,
+			"categories": ["Shops", "Toy Store"],
+			"date": "2023-12-20",
+			"name": "Playing Mantis"
+		}
+	]
+}

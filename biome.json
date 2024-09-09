@@ -3,6 +3,14 @@
 	"organizeImports": { "enabled": true },
 	"linter": {
 		"enabled": true,
-		"ignore": ["dist"]
+		"ignore": ["dist"],
+		"rules": {
+			"correctness": {
+				"noUnusedImports": "error"
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true
 	}
 }
