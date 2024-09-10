@@ -28,14 +28,13 @@ const Home = () => {
 	const categories =
 		data?.transactions.map((transaction) => transaction.categories) || [];
 	const uniqueCategories = [...new Set(categories.flat())];
-	const transactionsToShow =
-		selectedCategories.length > 0
-			? data?.transactions.filter((transaction) =>
-					selectedCategories.some((category) =>
-						transaction.categories.includes(category),
-					),
-				)
-			: data?.transactions;
+	const transactionsToShow = selectedCategories.length
+		? data?.transactions.filter((transaction) =>
+				transaction.categories.some((category) =>
+					selectedCategories.includes(category),
+				),
+			)
+		: data?.transactions;
 
 	const handleCategoryClick = (category: string) => {
 		if (selectedCategories?.includes(category)) {
@@ -46,7 +45,7 @@ const Home = () => {
 	};
 
 	return (
-		<div className="w-screen h-screen p-4 flex space-y-4 flex-col">
+		<div className="w-full p-4 flex space-y-4 flex-col">
 			<div className="flex space-x-4">
 				{uniqueCategories.map((category) => (
 					<Button

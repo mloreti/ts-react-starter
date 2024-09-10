@@ -5,7 +5,7 @@ const Home = () => {
 	const [clicked, setClicked] = React.useState(false);
 
 	return (
-		<div className="w-screen h-screen content-center">
+		<div className="w-full h-full content-center">
 			<div className="flex flex-col space-y-4 text-center">
 				<h1 className="text-3xl font-bold">Hello world!</h1>
 				{clicked && <p>You clicked me!</p>}
