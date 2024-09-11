@@ -9,17 +9,19 @@ describe("Home", () => {
     expect(text).toBeInTheDocument();
   });
 
-  test("renders click me button", () => {
+  test("renders submit button", () => {
     render(<App />);
-    const button = screen.getByText(/Click me!/i);
+    const button = screen.getByText("Submit");
     expect(button).toBeInTheDocument();
   });
 
-  test("clicking button shows message", async () => {
+  test("enter input and submit", async () => {
     render(<App />);
-    const button = screen.getByText(/Click me!/i);
-    await userEvent.click(button);
-    const message = screen.getByText(/You clicked me!/i);
-    expect(message).toBeInTheDocument();
+
+    await userEvent.type(screen.getByPlaceholderText("Name"), "Testing");
+    await userEvent.click(screen.getByText("Submit"));
+
+    expect(screen.getByText("Hello Testing!")).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("Name")).toHaveValue("");
   });
 });
