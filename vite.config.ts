@@ -4,22 +4,22 @@ import { defineConfig } from "vitest/config";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
-	test: {
-		environment: "jsdom",
-		setupFiles: ["./tests/setup.ts"],
-		globals: true,
-		coverage: {
-			provider: "v8",
-			reportsDirectory: "./tests/coverage",
-			reporter: ["text"],
-			include: ["src/**/*"],
-			exclude: ["node_modules", "tests", "src/components/ui/base/**"],
-		},
-	},
-	resolve: {
-		alias: {
-			"@": path.resolve(__dirname, "./src"),
-		},
-	},
+  plugins: [react()],
+  test: {
+    environment: "jsdom",
+    setupFiles: ["./tests/setup.ts"],
+    globals: true,
+    coverage: {
+      provider: "v8",
+      reportsDirectory: "./tests/coverage",
+      reporter: ["text"],
+      include: ["src/**/*"],
+      exclude: ["node_modules", "tests", "src/components/ui/base/**"],
+    },
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });

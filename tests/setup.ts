@@ -6,14 +6,14 @@ import { server } from "./mocks/node";
 expect.extend(matchers);
 
 beforeAll(() => {
-	server.listen();
+  server.listen();
 });
 
 afterEach(() => {
-	server.resetHandlers();
-	cleanup();
+  server.resetHandlers();
+  cleanup();
 });
 
 afterAll(() => {
-	server.close();
+  server.close();
 });
