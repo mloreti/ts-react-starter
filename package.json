@@ -10,10 +10,12 @@
     "preview": "vite preview",
     "test": "vitest run --coverage",
     "test:watch": "vitest watch --coverage",
-    "shadcn": "npx shadcn@latest add"
+    "shadcn": "npx shadcn@latest add && bun run lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@tanstack/react-query": "^5.55.0",
     "class-variance-authority": "^0.7.0",
@@ -22,9 +24,11 @@
     "lucide-react": "^0.439.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "wouter": "^3.3.5"
+    "wouter": "^3.3.5",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",

@@ -4,6 +4,10 @@ Data
 - [Ky](https://github.com/sindresorhus/ky) - Tiny and elegant HTTP client based on the browser Fetch API
 - [React-Query](https://tanstack.com/query/latest/docs/framework/react/overview) - Hooks for fetching, caching and updating asynchronous data in React
 
+Forms
+- [React-Hook-Form](https://react-hook-form.com) - Performant, flexible and extensible forms with easy-to-use validation
+- [Zod](https://zod.dev) - TypeScript-first schema declaration and validation library
+
 Routing
 - [Wouter](https://github.com/molefrog/wouter) - A minimalist-friendly declarative routing for React
 
